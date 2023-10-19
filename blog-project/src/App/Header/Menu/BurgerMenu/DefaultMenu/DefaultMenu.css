@@ -1,0 +1,63 @@
+.menu
+{
+    display: none;
+    grid-column: 2/5;
+}
+
+.menu_list
+{
+    display: block;
+
+}
+
+.menu_list_item
+{
+    /* width: 100%; */
+}
+
+.menu_link
+{
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.menu_link:hover
+{
+    transition: 0.2s ease;
+    font-size: 22px;
+    border-bottom: 3px solid #000;
+}
+
+.menu_link:not(hover)
+{
+    transition: 0.2s ease;
+}
+
+.menu_link:active
+{
+    border-bottom: 3px solid #000;
+
+}
+
+@media screen and (min-width: 767px)
+{
+    .menu
+    {
+        display: block;
+    }
+
+    .menu_list
+    {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: end;
+    }
+}

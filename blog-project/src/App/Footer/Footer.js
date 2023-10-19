@@ -1,0 +1,60 @@
+import React from "react";
+import "./Footer.css"
+import logo from "./logoFooter.png"
+
+const Footer = () => {
+    return (
+        <footer className="footer">
+            {/* <div className="footer_row"> */}
+            <div className="uppercase footer_startTextLine">
+                <span className="bold">Digitalproductdesign</span>
+                <span className="light">Remotework</span>
+                <span className="bold">UXdesign</span>
+                <span className="light">Distributedteams</span>
+                <span className="bold">Creativity</span>
+                <span className="light">Strategy</span>
+                <span className="bold">Suspense</span>
+                <span className="light">Growth</span>
+                <span className="bold">Digitalproductdesign</span>
+                <span className="light">Remotework</span>
+                <span className="bold">UXdesign</span>
+                <span className="light">Distributedteams</span>
+                <span className="bold">Creativity</span>
+                <span className="light">Strategy</span>
+                <span className="bold">Suspense</span>
+                <span className="light">Growth</span>
+
+                {/* <span className="light">Growth</span> */}
+                {/* <span className="light">Growth</span> */}
+            </div>
+            <div className="centerItem">
+                <div className="centerItem_row">
+                    <div className="footer_logo">
+                        <div className="footer_logo_box">
+                            <img src={logo} alt="//"></img>
+                        </div>
+                    </div>
+                    <div className="footer_text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit tempus erat egestas efficitur. In hac habitasse platea dictumst.<br /> Fusce a nunc eget ligula suscipit finibus.
+                        </p>
+                    </div>
+                    <div className="footer_contacts">
+                        <a href="/" className="footer_contacts_link"> Twitter</a>
+                        <a href="/" className="footer_contacts_link"> Linkedin</a>
+                        <a href="/" className="footer_contacts_link"> RSS</a>
+                    </div>
+                </div>
+            </div>
+            <div className="footer_aboutInfo_EndItem">
+
+                © 2012–2020 Nordic Rose Co. <br />
+                All rights reserved.
+
+            </div>
+            {/* </div> */}
+        </footer>
+    )
+}
+
+export default Footer
