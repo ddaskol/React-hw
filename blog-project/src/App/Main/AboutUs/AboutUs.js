@@ -6,10 +6,12 @@ import m from "../../../common/images/mackay.png"
 import harriet from "../../../common/images/harriet.png"
 import basis from "../../../common/images/basis.png"
 import nokia from "../../../common/images/nokia.png"
+import ButtonScrollToTop from "../ButtonScrollToTop/ButtonScrollToTop";
 
 const AboutUs = () => {
     return (
         <div className="main">
+            <ButtonScrollToTop />
             <div className="aboutUs_top">
                 <div className="aboutUs_top_suptitle">
                     Version 1.0 (Mar 25, 2020)

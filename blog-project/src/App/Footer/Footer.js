@@ -1,6 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css"
 import logo from "./logoFooter.png"
+// import { Link } from "react-router-dom";
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+}
 
 const Footer = () => {
     return (
@@ -31,7 +40,7 @@ const Footer = () => {
                 <div className="centerItem_row">
                     <div className="footer_logo">
                         <div className="footer_logo_box">
-                            <img src={logo} alt="//"></img>
+                            <Link to='/' onClick={scrollToTop}><img src={logo} alt="//" /></Link>
                         </div>
                     </div>
                     <div className="footer_text">
@@ -40,9 +49,9 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="footer_contacts">
-                        <a href="/" className="footer_contacts_link"> Twitter</a>
-                        <a href="/" className="footer_contacts_link"> Linkedin</a>
-                        <a href="/" className="footer_contacts_link"> RSS</a>
+                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> Twitter</a>
+                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> Linkedin</a>
+                        <a href="/https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> RSS</a>
                     </div>
                 </div>
             </div>

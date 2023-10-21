@@ -1,10 +1,12 @@
 import React from "react";
 import "./menu.css"
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import DefaultMenu from "./BurgerMenu/DefaultMenu/DefaultMenu";
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 
-const Menu = () => {
+
+const Menu = (
+) => {
     return (
         <>
             <DefaultMenu />
@@ -14,3 +16,4 @@ const Menu = () => {
 }
 
 export default Menu
+

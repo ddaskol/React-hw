@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './BurgerMenu.css'; // Create a CSS file for styling
 import Menu from '../Menu';
 
-function BurgerMenu() {
+function BurgerMenu(
+
+) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {

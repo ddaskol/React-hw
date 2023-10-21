@@ -13,9 +13,7 @@ const App = () => {
     return (
         <>
             <Header />
-            {/* <Main /> */}
-            {/* <ActiveArticle /> */}
-            <AboutUs />
+            <Main />
             <Footer />
         </>
     );

@@ -75,7 +75,7 @@
 
     .menu_list
     {
-        display: flex;
+        /* display: flex; */
         grid-auto-flow: row;
         /* justify-items: end; */
     }
