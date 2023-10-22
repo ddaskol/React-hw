@@ -2,9 +2,11 @@ import React from "react";
 import logo from "../../../common/images/articleTestlogo.png"
 import "./Blog.css"
 import ButtonScrollToTop from "../ButtonScrollToTop/ButtonScrollToTop";
+import ArticleItem from "./ArticleItem/ArticleItem";
+
+import articles from "./articles";
 
 const Blog = ({
-    scrollToTopButton,
 }) => {
     return (
         <div className="blog">
@@ -30,86 +32,16 @@ const Blog = ({
                             <h3>All articles</h3>
                         </div>
                         <div className="articlesBl_body">
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
-                            <div className="article_item">
-                                <div className="article_img">
-                                    <img src={logo} alt="betaImgLocal"></img>
-                                </div>
-                                <div className="article_title">
-                                    <p>Here are some things you should know regarding how we work </p>
-                                </div>
-                            </div>
+                            {
+                                articles.map(({
+                                    title, image
+                                }) => (
+                                    <ArticleItem
+                                        title={title}
+                                        image={image}
+                                    />
+                                ))
+                            }
 
                         </div>
                     </div>
