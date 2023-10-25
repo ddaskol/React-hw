@@ -51,6 +51,11 @@
     z-index: 1;
 }
 
+.mobile_menu .menu.additional
+{
+    display: block;
+}
+
 .mobile_menu ul
 {
     list-style-type: none;

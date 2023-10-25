@@ -10,6 +10,7 @@
 .line
 {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .hr
@@ -35,24 +36,25 @@
 
 }
 
+.activeArticle .article_img,
 .activeArticle_logo
 {
     max-width: 855px;
     max-height: 533px;
 
-    margin: 0 -15px 30px;
+    margin: 0 0 30px;
 }
 
+.activeArticle .article_img img,
 .activeArticle_logo img
 {
     width: 100%;
     height: 100%;
 }
 
+.activeArticle .article_title,
 .activeArticle_title
 {
-    /* text-align: center; */
-    /* font-family: New York Extra Large; */
     font-size: 26px;
     font-weight: 700;
 
@@ -60,6 +62,7 @@
     margin-bottom: 20px;
 }
 
+.activeArticle .article_subtitle,
 .activeArticle_subtitle
 {
     font-family: 'IBM Plex Mono', monospace;
@@ -70,34 +73,6 @@
 
     margin-bottom: 30px;
 }
-
-.articlesBl
-{
-    margin-bottom: 50px;
-}
-
-.articlesBl_row
-{}
-
-.articlesBl_title
-{
-    /* color: #000; */
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-
-    margin-bottom: 30px;
-}
-
-.articlesBl_body
-{
-    display: grid;
-    grid-template-columns: minmax(200px, 100%);
-
-}
-
-
 
 .article_item
 {
@@ -120,19 +95,6 @@
     height: 100%;
 }
 
-.article_title
-{
-
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 120%;
-    display: grid;
-    grid-template: 1fr/ 1fr 8fr 1fr;
-
-}
-
 .article_title p
 {
     grid-column: 2/3;
@@ -142,15 +104,17 @@
 {
     .activeArticle
     {
-        margin-bottom: 50px;
+        margin: 0;
     }
 
+    .activeArticle .article_title,
     .activeArticle_title
     {
         font-size: 30px;
         margin-bottom: 30px;
     }
 
+    .activeArticle .article_subtitle,
     .activeArticle_subtitle
     {
         font-size: 20px;
@@ -159,20 +123,9 @@
         margin-bottom: 40px;
     }
 
-    .articlesBl_title
-    {
-        font-size: 33px;
-        margin-bottom: 50px;
-    }
-
-    .articlesBl_body
-    {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 50%));
-    }
-
     .article_title
     {
-        grid-template: 1fr/ 1fr 6fr 1fr;
+        grid-template: 1fr/ 1fr 85% 1fr;
 
     }
 }
@@ -184,6 +137,7 @@
         width: 750px;
     }
 
+    .activeArticle .article_title,
     .activeArticle_title
     {
         font-size: 50px;
@@ -198,6 +152,7 @@
         padding: 0 10px;
     }
 
+    .activeArticle .article_subtitle,
     .activeArticle_subtitle
     {
         margin-bottom: 60px;
