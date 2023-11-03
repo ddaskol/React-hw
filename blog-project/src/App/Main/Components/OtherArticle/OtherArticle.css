@@ -24,17 +24,35 @@
 
 }
 
+
 .otherArticle .article_title
 {
 
     text-align: center;
+
+    display: grid;
+    grid-template: 1fr/ 1fr 8fr 1fr;
+
+    text-decoration: none;
+}
+
+.otherArticle .article_title a
+{
+    text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 120%;
-    display: grid;
-    grid-template: 1fr/ 1fr 8fr 1fr;
 
+    color: #000;
+}
+
+.otherArticle .article_title a:hover
+{
+    font-size: 20px;
+    /* font-weight: 700; */
+
+    transition: 2.5s ease-in-out;
 }
 
 @media screen and (min-width: 540px)

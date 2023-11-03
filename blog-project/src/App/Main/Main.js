@@ -9,11 +9,14 @@ import ButtonScrollToTop from "./Components/ButtonScrollToTop/ButtonScrollToTop"
 const Main = () => {
     return (
         <>
-            <Routes>
+            {/* <Routes>
                 <Route exact path="/" Component={Blog} />
                 <Route path="/article" Component={ActiveArticle} />
                 <Route path="/about" Component={AboutUs} />
-            </Routes>
+            </Routes> */}
+
+
+
 
             <ButtonScrollToTop />
         </>

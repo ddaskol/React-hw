@@ -4,15 +4,22 @@ import logo from "../../../common/images/articleTestlogo.png"
 
 import facebook from "../../../common/images/facebook.svg"
 import twitter from "../../../common/images/twitter.png"
-import avatar from "../../../common/images/avatar.png"
+// import avatar from "../../../common/images/avatar.png"
 import eyes from "../../../common/images/eyes.png"
 import ArticleItem from "../Blog/ArticleItem/ArticleItem";
 import articles from "../Blog/articles";
 import { OtherArticle } from "../Components/OtherArticle/OtherArticle";
+import { useLoaderData } from "react-router-dom";
 
 
 const ActiveArticle = () => {
-    const [mainArticle, setMainArticle] = useState(articles[0])
+    // const [mainAarticlerticle, setarticle] = useState(articles[0])
+
+
+
+    const { article } = useLoaderData();
+
+    console.log(article)
 
     return (
         <>
@@ -20,23 +27,15 @@ const ActiveArticle = () => {
 
                 <div className="container">
                     <div className="activeArticle">
-                        {/*замінюю на той самий компонент, зо і в інших сторінках, але розташування елементів не відповідє макету  */}
 
-                        {/* <ArticleItem
-                            title="A few words about this blog platform, Ghost, and how this site was made"
-                            image={logo}
-                            subtitle="Why Ghost (& Figma) instead of Medium, WordPress or other options?"
-                        /> */}
                         <ArticleItem
-                            title={mainArticle.title}
-                            image={mainArticle.image}
-                            subtitle={mainArticle.subtitle}
+                            article={article}
+                            type="long"
                         />
 
 
-                        <div className="line"><div className="hr"> </div></div>
-
-                        <div className="activeArticle_creator_body">
+                        {/* <div className="line"><div className="hr"> </div></div> *
+                         <div className="activeArticle_creator_body">
                             <div className="activeArticle_creator_img">
                                 <img src={avatar} alt="avatar"></img>
                             </div>
@@ -118,7 +117,7 @@ const ActiveArticle = () => {
                                 <button className="creator_network_btn"><img src={facebook}></img></button>
                                 <button className="creator_network_btn"><img src={twitter}></img></button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

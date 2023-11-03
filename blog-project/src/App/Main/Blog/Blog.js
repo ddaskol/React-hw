@@ -8,16 +8,14 @@ import { OtherArticle } from "../Components/OtherArticle/OtherArticle";
 
 const Blog = ({
 }) => {
-    const [mainArticle, setMainArticle] = useState(articles[0])
+    const [mainArticle, setMainArticle] = useState(articles[2])
 
     return (
         <div className="blog">
             <div className="container">
                 <div className="activeArticle">
                     <ArticleItem
-                        title={mainArticle.title}
-                        image={mainArticle.image}
-                        subtitle={mainArticle.subtitle}
+                        article={mainArticle}
                     />
                 </div>
 
@@ -25,30 +23,6 @@ const Blog = ({
 
                 <OtherArticle
                 />
-
-                {/* <div className="articlesBl">
-                    <div className="articlesBl_row">
-                        <div className="articlesBl_title">
-                            <h3>All articles</h3>
-                        </div>
-                        <div className="articlesBl_body">
-                            {
-
-
-                                otherArticles?.map(({
-                                    id, title, image
-                                }) => (
-                                    <ArticleItem
-                                        key={id}
-                                        title={title}
-                                        image={image}
-
-                                    />
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div> */}
 
             </div>
         </div>

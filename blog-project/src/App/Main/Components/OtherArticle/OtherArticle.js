@@ -7,7 +7,7 @@ export const OtherArticle = () => {
     const [otherArticles, setOtherArticles] = useState()
 
     useEffect(() => {
-        const filtredArticles = articles.filter((article, i) => i !== 0)
+        const filtredArticles = articles.filter((article, i) => i !== 2)
         setOtherArticles(filtredArticles)
     }, [])
     return (
@@ -19,13 +19,10 @@ export const OtherArticle = () => {
                     </div>
                     <div className="otherArticle_body">
                         {
-                            otherArticles?.map(({
-                                id, title, image
-                            }) => (
+                            otherArticles?.map((article) => (
                                 <ArticleItem
-                                    key={id}
-                                    title={title}
-                                    image={image}
+                                    key={article.id}
+                                    article={article}
                                 />
                             ))
                         }
