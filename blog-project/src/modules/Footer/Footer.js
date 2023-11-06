@@ -2,14 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css"
 import logo from "./logoFooter.png"
+import { scrollToTop } from "../../helpers";
 // import { Link } from "react-router-dom";
-
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-}
 
 const Footer = () => {
     return (
@@ -49,8 +43,8 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="footer_contacts">
-                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> Twitter</a>
-                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> Linkedin</a>
+                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link" rel="noreferrer"> Twitter</a>
+                        <a href="https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link" rel="noreferrer"> Linkedin</a>
                         <a href="/https://t.me/elitnaneruhomist" target="_blank" className="footer_contacts_link"> RSS</a>
                     </div>
                 </div>

@@ -1,12 +1,14 @@
 import React from "react";
 import "./aboutUs.css"
 
-import gtf from "../../../common/images/gtf.png"
-import m from "../../../common/images/mackay.png"
-import harriet from "../../../common/images/harriet.png"
-import basis from "../../../common/images/basis.png"
-import nokia from "../../../common/images/nokia.png"
-import ButtonScrollToTop from "../Components/ButtonScrollToTop/ButtonScrollToTop";
+
+import gtf from "../../common/images/gtf.png"
+import m from "../../common/images/mackay.png"
+import harriet from "../../common/images/harriet.png"
+import basis from "../../common/images/basis.png"
+import nokia from "../../common/images/nokia.png"
+
+import ButtonScrollToTop from "../ui/ButtonScrollToTop/ButtonScrollToTop";
 
 const AboutUs = () => {
     return (
