@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
-import ArticleItem from "../../Blog/ArticleItem/ArticleItem";
-import articles from "../../Blog/articles";
-import "./OtherArticle.css"
 
-export const OtherArticle = () => {
+import ArticleCard from "../../ui/ArticleCard/ArticleCard";
+
+import articles from "../../Blog/articles";
+import "./ArticlesList.css"
+
+export const ArticlesList = ({ currentId }) => {
     const [otherArticles, setOtherArticles] = useState()
 
     useEffect(() => {
-        const filtredArticles = articles.filter((article, i) => i !== 0)
+        const filtredArticles = articles.filter((article, i) => Number(article.id) !== Number(currentId))
         setOtherArticles(filtredArticles)
-    }, [])
+    }, [ currentId ])
+
     return (
         <div className="otherArticle">
             <div className="container">
@@ -20,10 +23,12 @@ export const OtherArticle = () => {
                     <div className="otherArticle_body">
                         {
                             otherArticles?.map((article) => (
-                                <ArticleItem
+                                <ArticleCard
                                     key={article.id}
-                                    article={article}
-                                />
+                                >
+                                    <ArticleCard.Image>{article.image}</ArticleCard.Image>
+                                    <ArticleCard.Title to={article.id}>{article.title}</ArticleCard.Title>
+                                </ArticleCard>
                             ))
                         }
                     </div>
