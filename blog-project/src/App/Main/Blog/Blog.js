@@ -16,6 +16,7 @@ const Blog = ({
                 <div className="activeArticle">
                     <ArticleItem
                         article={mainArticle}
+
                     />
                 </div>
 

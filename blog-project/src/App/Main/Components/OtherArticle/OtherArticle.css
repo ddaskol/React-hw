@@ -25,7 +25,7 @@
 }
 
 
-.otherArticle .article_title
+.otherArticle .shortArticleItem_title
 {
 
     text-align: center;
@@ -36,7 +36,7 @@
     text-decoration: none;
 }
 
-.otherArticle .article_title a
+.otherArticle .shortArticleItem_title a
 {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
@@ -47,7 +47,7 @@
     color: #000;
 }
 
-.otherArticle .article_title a:hover
+.otherArticle .shortArticleItem a:hover
 {
     font-size: 20px;
     /* font-weight: 700; */

@@ -1,9 +1,12 @@
 import React from "react";
 import '../Blog.css'
+import './ArticleItem.css'
 
 //test
 import facebook from "../../../../common/images/facebook.svg"
 import twitter from "../../../../common/images/twitter.png"
+import eyes from "../../../../common/images/eyes.png"
+
 ///test
 
 import logo from "../../../../common/images/articleTestlogo.png"
@@ -12,14 +15,16 @@ import { Link } from "react-router-dom";
 
 const ArticleItem = ({
     article,
-    type = "short"
+    type = "short",
+
 }) => {
-    const { isActiveArticle, id, subtitle, title, image, creatorAvatar, creatorName, createDate, createInfo, text, coreImage, coreImageCaption, } = article
+    const { isActiveArticle, id, subtitle, title, image, creatorAvatar, creatorName, createDate, createInfo, coreImage, coreImageCaption, text1 } = article
     return (
         <>
             <ShortArticle
                 article={article}
             />
+
             {
                 type == "long"
                 &&
@@ -35,11 +40,10 @@ const ShortArticle = ({
     article
 }) => {
     return (
-        <div className="article_item">
-            <div className="article_img">
+        <div className="shortArticleItem">
+            <div className="shortArticleItem_img">
                 <img src={article.image} alt="betaImgLocal"></img>
             </div>
-
 
             {/* {isActiveArticle === true ?
                 <div className="article_title">
@@ -56,16 +60,17 @@ const ShortArticle = ({
                 </div>
             } */}
 
-
-            <div className="article_title">
+            <div className="shortArticleItem_title">
                 <p>
                     <Link to={`/article/${article.id}`}>{article.title}</Link>
                 </p>
             </div>
 
-            {article.isActiveArticle ? <div className="article_subtitle">
+            {/* {article.isActiveArticle ?  */}
+            <div className="shortArticleItem_subtitle">
                 <p>{article.subtitle}</p>
-            </div> : null}
+            </div>
+            {/* : null} */}
         </div>
     )
 }
@@ -75,11 +80,13 @@ const LongArticle = ({
 }) => {
     return (
         <>
-            <div className="activeArticle_creator_body">
-                <div className="activeArticle_creator_img">
+            <div className="line"><div className="hr"> </div></div>
+
+            <div className="articleItem_creator_body">
+                <div className="articleItem_creator_img">
                     <img src={article.creatorAvatar} alt="avatar"></img>
                 </div>
-                <div className="activeArticle_creator_info">
+                <div className="articleItem_creator_info">
                     <div className="creator_name">
                         <h4>{article.creatorName}</h4>
                     </div>
@@ -92,9 +99,9 @@ const LongArticle = ({
                     <button className="creator_network_btn"><img src={twitter}></img></button>
                 </div>
             </div>
-            <div className="activeArticle_body">
+            <div className="articleItem_body">
                 <div className="text">
-                    {article.text}
+                    {article.text1}
                 </div>
                 <div className="img">
                     <img src={article.coreImage}></img>
@@ -103,6 +110,8 @@ const LongArticle = ({
                     </div>
                 </div>
                 <div className="text">
+                    {article.text2}
+
                     <p></p>
                     <p></p>
                     <p>
@@ -129,11 +138,11 @@ const LongArticle = ({
             </div>
             {/* <div className="line"><div className="hr"> </div></div> */}
 
-            <div className="activeArticle_creator_body">
-                <div className="activeArticle_creator_img">
+            <div className="articleItem_creator_body">
+                <div className="articleItem_creator_img">
                     <img src={article.creatorAvatar} alt="avatar"></img>
                 </div>
-                <div className="activeArticle_creator_info">
+                <div className="articleItem_creator_info">
                     <div className="creator_name">
                         <h4>{article.creatorName}</h4>
                     </div>
@@ -142,6 +151,7 @@ const LongArticle = ({
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
