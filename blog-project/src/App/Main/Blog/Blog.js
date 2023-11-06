@@ -8,7 +8,7 @@ import { OtherArticle } from "../Components/OtherArticle/OtherArticle";
 
 const Blog = ({
 }) => {
-    const [mainArticle, setMainArticle] = useState(articles[2])
+    const [mainArticle, setMainArticle] = useState(articles[0])
 
     return (
         <div className="blog">

@@ -18,7 +18,7 @@ const ArticleItem = ({
     type = "short",
 
 }) => {
-    const { isActiveArticle, id, subtitle, title, image, creatorAvatar, creatorName, createDate, createInfo, coreImage, coreImageCaption, text1 } = article
+    const { isActiveArticle, id, subtitle, title, image, creatorAvatar, creatorName, createDate, createInfo, coreImage, coreImageCaption, text } = article
     return (
         <>
             <ShortArticle
@@ -101,7 +101,7 @@ const LongArticle = ({
             </div>
             <div className="articleItem_body">
                 <div className="text">
-                    {article.text1}
+                    {article.text.map((item) => <p>{item}</p>)}
                 </div>
                 <div className="img">
                     <img src={article.coreImage}></img>
@@ -109,22 +109,7 @@ const LongArticle = ({
                         {article.coreImageCaption}
                     </div>
                 </div>
-                <div className="text">
-                    {article.text2}
 
-                    <p></p>
-                    <p></p>
-                    <p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </p>
-                    <p></p>
-                    <p></p>
-
-                </div>
                 <div className="creator_network">
                     <button className="flex creator_network_btn">
                         <img src={facebook}></img>
@@ -157,3 +142,28 @@ const LongArticle = ({
 }
 
 export default ArticleItem
+
+
+// const text = [
+//     { type: "img", content: "..." },
+//     { type: "p", content: "..." },
+//     { type: "list", content: "..." },
+// ]
+
+//     < div >
+// {
+//     text.map((item) => {
+//         if (item.type == "img") {
+//             return <img>{item.content}</img>
+//         } else if (item.type == "p") {
+//             return <p>{item.content}</p>
+//         } else if (item.type == "list") {
+//             return <li>{item.content}</li>
+//         } else {
+//             return <span>{item.content}</span>
+//         }
+//     })
+// }
+
+
+// </>

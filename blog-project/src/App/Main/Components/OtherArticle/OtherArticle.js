@@ -7,7 +7,7 @@ export const OtherArticle = () => {
     const [otherArticles, setOtherArticles] = useState()
 
     useEffect(() => {
-        const filtredArticles = articles.filter((article, i) => i !== 2)
+        const filtredArticles = articles.filter((article, i) => i !== 0)
         setOtherArticles(filtredArticles)
     }, [])
     return (
