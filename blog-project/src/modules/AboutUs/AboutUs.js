@@ -1,14 +1,15 @@
 import React from "react";
 import "./aboutUs.css"
 
-
-import gtf from "../../common/images/gtf.png"
-import m from "../../common/images/mackay.png"
-import harriet from "../../common/images/harriet.png"
-import basis from "../../common/images/basis.png"
-import nokia from "../../common/images/nokia.png"
-
 import ButtonScrollToTop from "../ui/ButtonScrollToTop/ButtonScrollToTop";
+
+
+const gtf = "/images/gtf.png"
+const m = "/images/mackay.png"
+const harriet = "/images/harriet.png"
+const basis = "/images/basis.png"
+const nokia = "/images/nokia.png"
+
 
 const AboutUs = () => {
     return (

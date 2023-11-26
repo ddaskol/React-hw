@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 
 import ArticleCard from "../../ui/ArticleCard/ArticleCard";
 
-import articles from "../../Blog/articles";
+// import articles from "../../Blog/articles";
 import "./ArticlesList.css"
 
-export const ArticlesList = ({ currentId }) => {
+export const ArticlesList = ({ articles, currentId }) => {
     const [otherArticles, setOtherArticles] = useState()
+
 
     useEffect(() => {
         const filtredArticles = articles.filter((article, i) => Number(article.id) !== Number(currentId))
         setOtherArticles(filtredArticles)
-    }, [ currentId ])
+    }, [articles, currentId])
 
     return (
         <div className="otherArticle">

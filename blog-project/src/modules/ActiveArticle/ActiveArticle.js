@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./ActiveArticle.css"
-import eyes from "../../common/images/eyes.png"
 
 import ArticleCard from "../ui/ArticleCard/ArticleCard";
 
@@ -8,17 +7,19 @@ import { ArticlesList } from "../ui/ArcitlesList/ArticlesList";
 import { useLoaderData, useParams } from "react-router-dom";
 import ArticleContent from "../ui/ArticleContent/ArticleContent";
 import { scrollToTop } from "../../helpers";
+import { useArticles } from "../ui/ArcitlesList/useArticles";
 
+const eyes = "/images/eyes.png"
 
 const ActiveArticle = () => {
-    // const [mainAarticlerticle, setarticle] = useState(articles[0])
     const { id } = useParams()
+    const { articles } = useArticles({ id })
+
     const { article } = useLoaderData();
 
     useEffect(() => {
         scrollToTop()
     }, [id])
-    console.log(id, typeof id)
     return (
         <>
             <div className="activeArticle">
@@ -30,7 +31,7 @@ const ActiveArticle = () => {
                         <ArticleCard.Subtitle>{article.subtitle}</ArticleCard.Subtitle>
                     </ArticleCard>
 
-                    <ArticleContent article={article}/>
+                    <ArticleContent article={article} />
                 </div>
             </div>
             <div className="hr_eyes">
@@ -40,7 +41,7 @@ const ActiveArticle = () => {
                 </div>
             </div>
 
-            <ArticlesList currentId={id}/>
+            <ArticlesList currentId={id} articles={articles} />
         </>
     )
 }

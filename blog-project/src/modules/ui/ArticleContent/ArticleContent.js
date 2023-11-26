@@ -1,7 +1,7 @@
 import React from 'react'
 
-import facebook from "../../../common/images/facebook.svg"
-import twitter from "../../../common/images/twitter.png"
+const facebook = "/images/facebook.svg"
+const twitter = "/images/twitter.png"
 
 const ArticleContent = ({
     article
@@ -29,7 +29,7 @@ const ArticleContent = ({
             </div>
             <div className="articleItem_body">
                 <div className="text">
-                    {article.text.map((item, i) => <p key={"text" + i + article.id}>{item}</p>)}
+                    {article.text?.map((item, i) => <p key={"text" + i + article.id}>{item}</p>)}
                 </div>
                 <div className="img">
                     <img src={article.coreImage}></img>

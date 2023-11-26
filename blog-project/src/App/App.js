@@ -1,6 +1,6 @@
-import React from "react";
-import "../common/styles/reset.css"
-import "../common/styles/base.css"
+import React, { useEffect } from "react";
+import "../styles/reset.css"
+import "../styles/base.css"
 
 import Footer from "../modules/Footer/Footer";
 import Header from "../modules/Header/Header";
@@ -14,7 +14,7 @@ const App = () => {
             <Header />
             <Outlet />
             <Footer />
-            <ButtonScrollToTop/>
+            <ButtonScrollToTop />
         </>
     );
 }
